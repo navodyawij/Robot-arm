@@ -4,6 +4,20 @@
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="Arm_urdf">
+<link name="base_footprint">
+    <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+            <box size="0.001 0.001 0.001" />
+        </geometry>
+    </visual>
+</link>
+
+<joint name="base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0.001" rpy="0 0 0" />
+    <parent link="base_footprint"/>
+    <child link="base_link" />
+</joint>
   <link
     name="base_link">
     <inertial>
@@ -26,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/base_link.STL" />
+          filename="package://arm_urdf_new/meshes/visual/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +54,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/base_link.STL" />
+          filename="package://arm_urdf_new/meshes/visual/base_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/shoulder_base.STL" />
+          filename="package://arm_urdf_new/meshes/visual/shoulder_base.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +94,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/shoulder_base.STL" />
+          filename="package://arm_urdf_new/meshes/visual/shoulder_base.STL" />
       </geometry>
     </collision>
   </link>
@@ -124,7 +138,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/upper_arm_cylinder.STL" />
+          filename="package://arm_urdf_new/meshes/visual/upper_arm_cylinder.STL" />
       </geometry>
       <material
         name="">
@@ -138,7 +152,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/upper_arm_cylinder.STL" />
+          filename="package://arm_urdf_new/meshes/visual/upper_arm_cylinder.STL" />
       </geometry>
     </collision>
   </link>
@@ -182,7 +196,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/lower_arm_cylinder.STL" />
+          filename="package://arm_urdf_new/meshes/visual/lower_arm_cylinder.STL" />
       </geometry>
       <material
         name="">
@@ -196,7 +210,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/lower_arm_cylinder.STL" />
+          filename="package://arm_urdf_new/meshes/visual/lower_arm_cylinder.STL" />
       </geometry>
     </collision>
   </link>
@@ -240,7 +254,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/wrist_cylinder.STL" />
+          filename="package://arm_urdf_new/meshes/visual/wrist_cylinder.STL" />
       </geometry>
       <material
         name="">
@@ -254,7 +268,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/wrist_cylinder.STL" />
+          filename="package://arm_urdf_new/meshes/visual/wrist_cylinder.STL" />
       </geometry>
     </collision>
   </link>
@@ -298,7 +312,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/arm_rotate.STL" />
+          filename="package://arm_urdf_new/meshes/visual/arm_rotate.STL" />
       </geometry>
       <material
         name="">
@@ -312,7 +326,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/arm_rotate.STL" />
+          filename="package://arm_urdf_new/meshes/visual/arm_rotate.STL" />
       </geometry>
     </collision>
   </link>
@@ -356,7 +370,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/finger_1.STL" />
+          filename="package://arm_urdf_new/meshes/visual/finger_1.STL" />
       </geometry>
       <material
         name="">
@@ -370,7 +384,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/finger_1.STL" />
+          filename="package://arm_urdf_new/meshes/visual/finger_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -418,7 +432,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/red_block_1.STL" />
+          filename="package://arm_urdf_new/meshes/visual/red_block_1.STL" />
       </geometry>
       <material
         name="">
@@ -432,7 +446,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/red_block_1.STL" />
+          filename="package://arm_urdf_new/meshes/visual/red_block_1.STL" />
       </geometry>
     </collision>
   </link>
@@ -480,7 +494,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/fingure_2.STL" />
+          filename="package://arm_urdf_new/meshes/visual/fingure_2.STL" />
       </geometry>
       <material
         name="">
@@ -494,7 +508,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/fingure_2.STL" />
+          filename="package://arm_urdf_new/meshes/visual/fingure_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -542,7 +556,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/red_block_2.STL" />
+          filename="package://arm_urdf_new/meshes/visual/red_block_2.STL" />
       </geometry>
       <material
         name="">
@@ -556,7 +570,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/red_block_2.STL" />
+          filename="package://arm_urdf_new/meshes/visual/red_block_2.STL" />
       </geometry>
     </collision>
   </link>
@@ -604,7 +618,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/supporter.STL" />
+          filename="package://arm_urdf_new/meshes/visual/supporter.STL" />
       </geometry>
       <material
         name="">
@@ -618,7 +632,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Arm_urdf/meshes/supporter.STL" />
+          filename="package://arm_urdf_new/meshes/visual/supporter.STL" />
       </geometry>
     </collision>
   </link>

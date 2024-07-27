@@ -1,1 +1,0 @@
-controller_joint_names: ['', 'shoulder_base_joint', 'upper_arm_cylinder_joint', 'lower_arm_cylinder_joint', 'wrist_cylinder_joint', 'arm_rotate_joint', 'fingure_1_joint', 'red_block_1_joint', 'fingure_2_joint', 'red_block_2_joint', 'supporter_joint', ]
